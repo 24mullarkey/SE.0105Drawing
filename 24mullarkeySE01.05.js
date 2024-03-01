@@ -58,7 +58,7 @@ function setup() {
   let bannerDiv = select("#app-header");
   bannerDiv.html("Play Designer App"); //#2 Change to your themed title
 
-  let canvas = createCanvas(450, 660);
+  let canvas = createCanvas(windowWidth, windowHeight-140);
   let canvasContainer = select("#canvasContainer");
   canvas.parent("canvasContainer");
 
@@ -131,6 +131,9 @@ function draw() {
   currentColor = colorPickers[currentColorIndex].value();
   if (mouseIsPressed && mouseY < height + 10) {
     drawShape();
+  }
+  if (width != windowWidth || height != windowHeight-140){
+    resizeCanvas(windowWidth, windowHeight-140);
   }
 } //end function draw()
 
