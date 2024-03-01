@@ -132,9 +132,6 @@ function draw() {
   if (mouseIsPressed && mouseY < height + 10) {
     drawShape();
   }
-  if (width != windowWidth || height != windowHeight-140){
-    resizeCanvas(windowWidth, windowHeight-140);
-  }
 } //end function draw()
 
 //draw the selected shape
