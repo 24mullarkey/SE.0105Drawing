@@ -58,7 +58,7 @@ function setup() {
   let bannerDiv = select("#app-header");
   bannerDiv.html("Play Designer App"); //#2 Change to your themed title
 
-  let canvas = createCanvas(windowWidth, windowHeight-140);
+  let canvas = createCanvas(windowWidth, windowHeight-176);
   let canvasContainer = select("#canvasContainer");
   canvas.parent("canvasContainer");
   canvasContainer.elt.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
