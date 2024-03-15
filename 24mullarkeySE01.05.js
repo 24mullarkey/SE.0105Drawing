@@ -61,6 +61,9 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight-140);
   let canvasContainer = select("#canvasContainer");
   canvas.parent("canvasContainer");
+  canvasContainer.elt.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
+  canvasContainer.elt.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+  canvasContainer.elt.addEventListener('touchend', (e) => e.preventDefault(), { passive: false });
 
   controlsContainers = [
     select("#controlsContainer0"),
